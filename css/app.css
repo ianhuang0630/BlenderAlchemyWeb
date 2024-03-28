@@ -1,0 +1,172 @@
+.authors {
+    font-size: 1.25em;
+}
+
+.CodeMirror {
+    font-size: .8em;
+    height: auto;
+}
+
+.CodeMirror-scroll {
+    overflow-y: hidden;
+    overflow-x: auto;
+}
+
+#header_img {
+    margin-top: 2em;
+    margin-bottom: 1em;
+}
+
+.list-inline {
+	list-style: none;
+	margin-left: -0.5em;
+	margin-right: -0.5em;
+	padding-left: 0;
+}
+
+.list-inline > li {
+	display: inline-block;
+	margin-left: 0.5em;
+	margin-right: 0.5em;
+}
+
+.quality_emoji {
+	font-size: 65px;
+}
+
+.comp-margin {
+	margin-bottom: 10px
+}
+
+.myGallery img {
+    vertical-align: middle;
+}
+
+
+.video-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	width: 100%; /* Adjust this to change overall width */
+	margin: 0 auto;
+	padding: 10px;
+}
+.video-item {
+	width: 25%; /* Adjust this to change individual video width */
+	margin: 0 10px 10px 0;
+	text-align: center;
+}
+video {
+	width: 100%;
+}
+.video-caption {
+	font-size: 0.8em;
+	margin-top: 5px;
+}
+
+
+
+/* Style for the buttons */
+.button {
+    width: 150px;
+    display: inline-block;
+    padding: 10px 10px;
+    margin: 10px;
+    border: 2px solid #353434;
+    border-radius: 25px;
+    background-color: #353434;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Hover effect for the buttons */
+.button:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+/* .button_row {
+    margin:auto;
+} */
+
+.button_content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.button_item{
+    width: 170px;
+    text-align: center;
+    margin: 5px 0;
+    position:relative;
+}
+
+
+.banner{
+    display: flex;
+    justify-content:center;
+    flex-flow: row wrap;
+    width:100%;
+}
+.banner-visual{
+    width:65%;
+    flex-grow: 1;
+}
+
+.banner-title{
+    width: max(480px, 35%);
+    margin: auto;
+    flex-grow: 1;
+    padding: 30px;
+}
+.title{
+}
+.banner-img{
+    width:100%;
+}
+
+.multiple-color-gradient {
+    background: linear-gradient(45deg, #FFD700, #FFA07A, #9987eb);
+    /* background: orange */
+}
+
+.authors_link {
+    color: rgb(46, 46, 46);
+}
+
+.coming-soon{
+    font-size: 0.8em;
+    position: absolute;
+    border-radius: 5px;
+    padding: 3px;
+    bottom:-4px;
+    right:-4px;
+    background-color: rgb(255, 221, 0);
+}
+.image-sample{
+    margin-top:40px; 
+    margin-bottom:40px;
+}
+.video-sample{
+    margin-top:40px;
+    margin-bottom:40px;
+}
+.video-container{
+    display:flex;
+    flex-wrap: nowrap;
+    flex-direction: row;    
+    justify-content: space-around;
+    padding: 0;
+}
+
+.video-container-element{
+    height: auto;
+}
+
+.video-container-title{
+    background: yellow;
+}

@@ -1,10 +1,338 @@
+
 <!DOCTYPE html>
 <html>
-<head>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+
+    <meta name="description"
+        content="BlenderAlchemy: Editing 3D Graphics with Vision-Language Models">
+    <meta name="keywords" content="3D Graphics, AI agent, LLM">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>BlenderAlchemy</title>
+
+    
+    <!--FACEBOOK-->
+    <meta property="og:image" content="img/social.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1280">
+    <meta property="og:image:height" content="720">
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://ianhuang0630.com/BlenderAlchemy" />
+    <meta property="og:title" content="BlenderAlchemy" />
+    <meta property="og:description"
+        content="Project page for BlenderAlchemy" />
+
+    <!--TWITTER-->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="BlenderAlchemy" />
+    <meta name="twitter:description"
+        content="Project page for BlenderAlchemy" />
+    <meta name="twitter:image" content="img/social.png" />
+
+
+    <!--     <link rel="apple-touch-icon" href="apple-touch-icon.png"> -->
+    <!-- <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐈</text></svg>"> -->
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/app.css">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.3/clipboard.min.js"></script>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script type="text/javascript" id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+    </script>
+
+    <link rel="stylesheet" href="css/dics.min.css">
+    <!-- <script src="scripts/dics.min.js"></script> -->
+    <script>
+        document.addEventListener('DOMContentLoaded', domReady);
+        function domReady() {
+            for (const e of document.querySelectorAll(".b-dics")) {
+                new Dics({
+                    container: e,
+                    textPosition: "top"
+                });
+            }
+        }
+    </script>
 </head>
+
+
+
+
 <body>
-    <h1>Hello!</h1>
-    <p>This will be up soon. Please check back!</p>
+    
+    <div class="banner multiple-color-gradient">
+        <div class="banner-title">
+            <h2 class="col-md-12 text-center title">
+                <!-- <b>CAD</b><img src ="img/icon.png" style="width: 3%; height: 3%; position: relative; top: -3px"> </br>​​​​​​​​​​​​​​​​​​​​​​​​​​​​​ -->
+                <img src ="img/logo.png" style="width: 30px; height: 30px; position: relative; top: -3px">
+                <!-- <img src ="img/logo.png" style="width: 8vw; height: auto; position: relative; top: -3px"></br> -->
+                <b>BlenderAlchemy</b></br> 
+                Editing 3D Graphics with Vision-Language Models</br>
+                <!-- <small>arXiv</small> -->
+            </h2>
+            <div class="col-md-12 text-center">
+                <div style="margin-bottom: 0.7em; margin-top:0.2em" class="authors">
+                    <a  class="authors_link" href="https://ianhuang0630.github.io/">Ian Huang</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a  class="authors_link" href="https://www.guandaoyang.com/">Guandao Yang</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a  class="authors_link" href="https://geometry.stanford.edu/member/guibas/">Leonidas Guibas</a>
+                </div>
+
+                <div style="margin-bottom: 0.5em;" class="affiliations">
+                    Stanford University
+                </div>
+
+                <!-- <div style="margin-bottom: 0.7em;" class="col-md-12 text-center">
+                    *denotes equal contribution
+                </div> -->
+
+            </div>
+            <div class=" text-center button_row">
+              <!-- Second button -->
+                <div class="nav nav-justified button_content">
+                    <div class="button_item">
+                        <a href="#" class="button">
+                          <!-- <i class="fas fa-paperclip"></i>  -->
+                          <i class="fa-solid fa-paperclip"></i> 
+                          Paper
+                        </a>
+                    </div>
+                    <div class="button_item">
+                        <a href="#" class="button">
+                          <!-- <i class="fas fa-code"></i>  -->
+                          <i class="fa-brands fa-github"></i>
+                          Code
+                        </a>                     
+                        <!-- TODO REMOVE THIS ONCE LINKED -->
+                        <div class="coming-soon">
+                            Coming soon!
+                        </div>
+                    </div>
+                    <div class="button_item">
+                        <a href="#" class="button">
+                          <!-- <i class="fas fa-magic"></i>  -->
+                          <i class="fa-solid fa-wand-magic-sparkles"></i>
+                          Blender Plugin
+                        </a>
+                        <!-- TODO REMOVE THIS ONCE LINKED -->
+                        <div class="coming-soon">
+                            Coming soon!
+                        </div>
+                      </div>
+                  </div>
+            </div>
+        </div>
+        <div class="banner-visual">
+            <!-- TODO : replace with animation -->
+            <img src="img/options_front.png" class="banner-img">
+        </div> 
+    </div>
+
+    
+    <div class="container" id="main">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Abstract
+                </h3>
+                <!-- <image src="img/rays.jpg" class="img-responsive" alt="overview"><br> -->
+                <p class="text-justify">
+                    Graphics design is important for various applications, including movie production and game design. To create a high-quality scene, designers usually need to spend hours in software like Blender, in which they might need to interleave and repeat operations, such as connecting material nodes, hundreds of times. Moreover, slightly different design goals may require completely different sequences, making automation difficult. In this paper, we propose a system that leverages Vision-Language Models (VLMs), like GPT-4V, to intelligently search the design action space to arrive at an answer that can satisfy a user's intent. Specifically, we design a vision-based edit generator and state evaluator to work together to find the correct sequence of actions to achieve the goal. Inspired by the role of visual imagination in the human design process, we supplement the visual reasoning capabilities of VLMs with imagined reference images from image-generation models, providing visual grounding of abstract language descriptions. In this paper, we provide empirical evidence suggesting our system can produce simple but tedious Blender editing sequences for tasks such as editing procedural materials from text and/or reference images, as well as adjusting lighting configurations for product renderings in complex scenes.
+                </p>
+                <br>
+                
+            </div>
+        </div>
+
+        
+        <!-- Materials -->
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Editing 3D Graphics as Visual Program Refinement
+                </h3> 
+                <div class="image-sample">
+                    <image src="img/blenderalchemy_pipeline.png" style="width:100%;" class="img-responsive center-block" alt="pipeline"></image>
+                </div>
+                
+                <p class="text-justify">
+                    To perform edits within the Blender 3D design environment, BlenderAlchemy iteratively  refines a program that defines a sequence of edits within Blender. This is done using our visual program refinement procedure, which is composed of an edit generator and a state evaluator, which iteratively generates and selects among different edit hypotheses, respectively. Both the edit generator and the state evaluator are guided by an input user intention, specified using a combination of language and reference images, either provided or hallucinated using an text-to-image generator within the Visual Imagination module. At each step, we allow for the system to revert back to the edit hypothesis from a previous iteration.
+                </p>
+
+                <div class="image-sample">
+                    <image src="img/methods_overview.png" style="width:100%;" class="img-responsive center-block" alt="overview"></image>
+                </div>
+                <p class="text-justify">
+                    In the context of the material editing task, consider the task of transforming a wooden procedural material into marbled granite. The following is an illustrative sample of a sequence of edit generation and state selection steps.
+                </p>
+                <!-- Materials demo video -->
+                <div class="video-sample">
+                    <video src="videos/marble_process_animation.mp4" width="50px" autoplay loop muted controls>
+                    </video>
+                </div>
+
+                <h3>
+                    Materials
+                </h3>
+                <!-- <h4>
+                    Real Captured Scenes
+                </h4> -->
+                <p class="text-justify">
+                    Using this system, we can edit procedural materials using language descriptions. We show a few samples below.
+                </p>
+
+                <!-- transitions video -->
+                <div class="video-sample">  
+                    <video src="videos/Wood2others_animation.mp4" width="50px" autoplay loop muted>
+                    </video>      
+                </div>
+                
+                <p class="text-justify">
+                    Below, we show the application of a set of materials synthesized by BlenderAlchemy
+                    on a diverse set of scenes based off of assets created by 3D artists. BlenderAlchemy
+                    is capable of producing usable materials guided by language descriptions and also
+                    generating variations of the same kind of material.
+                </p>
+                
+                <div class="video-sample">  
+                    <video src="videos/car_tunnel.mp4" width="50px" autoplay loop muted  controls>
+                    </video>      
+                </div>
+            
+                <!-- Katana Demo Video -->
+                <div class="video-sample">  
+                    <video src="videos/katanas_animation.mp4" width="50px" autoplay loop muted>
+                    </video>      
+                </div>
+
+                
+                <!-- Nike Video -->
+                <div class="video-sample">
+                    <div class="video-container">
+                        <div class="video-container-element">
+                            Old metal (Original)
+                        </div>
+                        <div class="video-container-element">
+                            Ice slats
+                        </div>
+                        <div class="video-container-element">
+                            Surface of the sun
+                        </div>
+                    </div>
+                    <div class="video-container">
+                        <div class="video-container-element">
+                            <!-- <div class="video-container-title">
+                                Old metal (Input)
+                            <div> -->
+                            <video src="videos/nike_metal_0000-0100.mp4" autoplay loop muted>
+                            </video>
+                        </div>
+                        <div class="video-container-element">
+                            <!-- <div class="video-container-title">
+                                Ice slats
+                            </div> -->
+                            <video src="videos/nike_ice_0000-0100.mp4" autoplay loop muted>
+                            </video>
+                        </div>
+                            
+                        <div class="video-container-element">
+                            <!-- <div class="video-container-title">
+                                Surface of the sun
+                            <div> -->
+                            <video src="videos/nike_sun_0000-0100.mp4" autoplay loop muted>
+                            </video>
+                        </div>
+                    </div>
+                </div>
+                
+                
+            </div>
+        </div>
+    
+        
+
+        
+        
+        <!-- Lighting -->
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Lighting
+                </h3>
+                <!-- <h4>
+                    Real Captured Scenes
+                </h4> -->
+                <p class="text-justify">
+                    Using the same technique for material editing, we can also synthesize variations in lighting configurations within
+                    scenes.
+                </p>
+                <div class="image-sample">
+                    <image src="img/hand_lotion.png" style="width:100%;" class="img-responsive center-block" alt="overview"></image>
+                </div>
+                <p class="text-justify">
+                    Doing this iteratively between optimizing lighting and materials allow us to tweak both in an input scene to match
+                    the language description.
+                </p>
+                <div class="image-sample">
+                    <image src="img/comet_cream.png" style="width:100%;" class="img-responsive center-block" alt="overview"></image>
+                </div>
+            </div>
+        </div>
+
+        <!-- 
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Geometry Nodes
+                </h3>
+            </div>
+        </div>
+        -->
+        
+        <!-- 
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Acknowledgements
+                </h3>
+                <p class="text-justify">
+                    I. Huang and L. Guibas acknowledge the support of ARL grant (W911NF21-2-0104), a Vannevar Bush Faculty Fellowship, and gifts from the Adobe and Snap Corporations. And special thanks to Fred Again.. 
+                </p>
+            </div>
+        </div> -->
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Citation
+                </h3>
+                <div class="form-group col-md-10 col-md-offset-1">
+                    <p> If you found the paper or code useful, please cite:
+                    </p>
+                    <textarea id="bibtex" class="form-control" readonly>
+
+                    </textarea>
+                </div>
+            </div>
+        </div>
 </body>
+
+
+
 </html>
