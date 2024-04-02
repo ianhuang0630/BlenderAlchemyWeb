@@ -194,15 +194,18 @@
                     In the context of the material editing task, consider the task of transforming a wooden procedural material into marbled granite. The following is an illustrative sample of a sequence of edit generation and state selection steps.
                 </p>
 
-                <!-- Marble demo gif -->
-                <div class="video-sample">
-                    <image src="gifs/marble_process.gif" style="width:100%;" class="img-responsive center-block" alt="marble process"></image>
+
+                <div id="marbleprocess-instance-container">
+                    <!-- Marble demo gif -->
+                    <!-- <div class="video-sample">
+                        <image src="gifs/marble_process.gif" style="width:100%;" class="img-responsive center-block" alt="marble process"></image>
+                    </div> -->
+                    <!-- Materials demo video -->
+                    <!-- <div class="video-sample">
+                        <video src="videos/marble_process_animation.mp4" width="50px" autoplay loop muted controls>
+                        </video>
+                    </div> -->
                 </div>
-                <!-- Materials demo video -->
-                <!-- <div class="video-sample">
-                    <video src="videos/marble_process_animation.mp4" width="50px" autoplay loop muted controls>
-                    </video>
-                </div> -->
 
                 <h3>
                     Materials
@@ -214,14 +217,17 @@
                     Using this system, we can edit procedural materials using language descriptions. We show a few samples below.
                 </p>
 
-                <!-- transitions video -->
-                <!-- <div class="video-sample">  
-                    <video src="videos/Wood2others_animation.mp4" width="50px" autoplay loop muted>
-                    </video>      
-                </div> -->
-                <!-- transitions gif -->
-                <div class="video-sample">
-                    <image src="gifs/Wood2others_animation.gif" style="width:100%;" class="img-responsive center-block" alt="wood to others"></image>  
+                <div id="wood2others-instance-container">
+                    <!-- transitions video -->
+                    <!-- <div class="video-sample">  
+                        <video src="videos/Wood2others_animation.mp4" width="50px" autoplay loop muted>
+                        </video>      
+                    </div> -->
+                    <!-- transitions gif -->
+                    <!-- <div class="video-sample">
+                        <image src="gifs/Wood2others_animation.gif" style="width:100%;" class="img-responsive center-block" alt="wood to others"></image>  
+                    </div>
+                    -->
                 </div>
                 
                 <p class="text-justify">
@@ -235,19 +241,20 @@
                     <video src="videos/car_tunnel.mp4" width="50px" autoplay loop muted  controls>
                     </video>      
                 </div>
-            
-                <!-- Katana Demo Video -->
-                <!-- <div class="video-sample">  
-                    <video src="videos/katanas_animation.mp4" width="50px" autoplay loop muted>
-                    </video>      
-                </div> -->
-
-                <!-- Katnas Demo Gif-->
-                <div class="video-sample">
-                    <image src="gifs/katanas_animation.gif" style="width:100%;" class="img-responsive center-block" alt="katanas"></image>
-                </div>
-                                    
                 
+
+                <div id="katanas-instance-container">
+                    <!-- Katana Demo Video -->
+                    <!-- <div class="video-sample">  
+                        <video src="videos/katanas_animation.mp4" width="50px" autoplay loop muted>
+                        </video>      
+                    </div> -->
+
+                    <!-- Katnas Demo Gif-->
+                    <!-- <div class="video-sample">
+                        <image src="gifs/katanas_animation.gif" style="width:100%;" class="img-responsive center-block" alt="katanas"></image>
+                    </div> -->
+                </div>
 
                 
                 <!-- Nike Video -->
@@ -263,7 +270,7 @@
                             Surface of the sun
                         </div>
                     </div>
-                    <div class="video-container">
+                    <div class="video-container" id="shoe-instance-container">
                         <!-- videos  -->
                         <!-- <div class="video-container-element">
                             <video src="videos/nike_metal_0000-0100.mp4" autoplay loop muted>
@@ -279,7 +286,7 @@
                         </div> -->
                 
                         <!-- gifs -->
-                        <div class="video-container-element">
+                        <!-- <div class="video-container-element">
                             <image src="gifs/nike_metal_0000-0100.gif" style="width:100%;" class="img-responsive center-block" alt="old metal"></image>
                         </div>
                         <div class="video-container-element">
@@ -287,7 +294,7 @@
                         </div>
                         <div class="video-container-element">
                             <image src="gifs/nike_sun_0000-0100.gif" style="width:100%;" class="img-responsive center-block" alt="surface of the sun"></image>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
@@ -357,6 +364,76 @@
                 </div>
             </div>
         </div>
+
+        <script>
+            var isPhone = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+            console.log("is Phone:", isPhone) ;
+            
+            // Marble process
+            const marbleprocess_example_gifs = '<div class="video-sample">'
+                +'<image src="gifs/marble_process.gif" style="width:100%;" class="img-responsive center-block" alt="marble process"></image>'
+                + '</div>'
+            const marbleprocess_example_vids = '<div class="video-sample">'
+                + '<video src="videos/marble_process_animation.mp4" width="50px" autoplay loop muted controls>'
+                + '</video>'
+                + '</div>'
+
+
+            // Wood2Others
+            const wood2others_example_gifs = '<div class="video-sample">'
+                    + '<image src="gifs/Wood2others_animation.gif" style="width:100%;" class="img-responsive center-block" alt="wood to others"></image>'
+                    + '</div>';
+            const wood2others_example_vids = '<div class="video-sample">'
+                + '<video src="videos/Wood2others_animation.mp4" width="50px" autoplay loop muted>'
+                +'</video>'
+                '</div>';
+            
+
+            // Katanas
+            const katanas_example_gifs = '<div class="video-sample">'
+                    + '<image src="gifs/katanas_animation.gif" style="width:100%;" class="img-responsive center-block" alt="katanas"></image>'
+                    + '</div>';
+            const katanas_example_vids = '<div class="video-sample">'
+                    + '<video src="videos/katanas_animation.mp4" width="50px" autoplay loop muted>'
+                    + '</video>'
+                    + '</div>';
+
+
+            // Shoes
+            const shoe_example_gifs = '<div class="video-container-element">'
+                        + '<image src="gifs/nike_metal_0000-0100.gif" style="width:100%;" class="img-responsive center-block" alt="old metal"></image>'
+                        + '</div>'
+                        + ' <div class="video-container-element">'
+                        + '<image src="gifs/nike_ice_0000-0100.gif" style="width:100%;" class="img-responsive center-block" alt="ice slats"></image>'
+                        + '</div>'
+                        + '<div class="video-container-element">'
+                        + '<image src="gifs/nike_sun_0000-0100.gif" style="width:100%;" class="img-responsive center-block" alt="surface of the sun"></image>'
+                        + '</div>';
+
+            const shoe_example_vids = '<div class="video-container-element">'
+                            + '<video src="videos/nike_metal_0000-0100.mp4" autoplay loop muted>'
+                            + '</video>'
+                            + '</div>'
+                            + '<div class="video-container-element">'
+                            + '<video src="videos/nike_ice_0000-0100.mp4" autoplay loop muted>'
+                            + '</video>'
+                            + '</div>'
+                            + '<div class="video-container-element">'
+                            + '<video src="videos/nike_sun_0000-0100.mp4" autoplay loop muted>'
+                            + '</video>'
+                            + '</div>';
+                                
+            var marbleprocess_mediaElement = isPhone ? marbleprocess_example_gifs : marbleprocess_example_vids;
+            var wood2others_mediaElement = isPhone ? wood2others_example_gifs: wood2others_example_vids;               
+            var katanas_mediaElement = isPhone ? katanas_example_gifs: katanas_example_vids;
+            var shoe_mediaElement = isPhone ? shoe_example_gifs : shoe_example_vids;
+
+            document.getElementById('marbleprocess-instance-container').innerHTML = marbleprocess_mediaElement;
+            document.getElementById('wood2others-instance-container').innerHTML = wood2others_mediaElement;
+            document.getElementById('katanas-instance-container').innerHTML = katanas_mediaElement;
+            document.getElementById('shoe-instance-container').innerHTML = shoe_mediaElement;
+            
+        </script>
 </body>
 
 
