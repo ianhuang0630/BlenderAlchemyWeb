@@ -237,10 +237,21 @@
                     generating variations of the same kind of material.
                 </p>
                 
-                <div class="video-sample">  
-                    <video src="videos/car_tunnel.mp4" width="50px" autoplay loop muted  controls>
-                    </video>      
+               
+                
+
+                <div id="cartunnel-instance-container">
+                    <!-- <div class="video-sample">  
+                        <image src="gifs/car_tunnel.gif" style="width:100%;" class="img-responsive center-block" alt="car in tunnel"></image>
+                    </div>
+
+                    
+                    <div class="video-sample">  
+                        <video src="videos/car_tunnel.mp4" width="50px" autoplay loop muted  controls>
+                        </video>      
+                    </div> -->
                 </div>
+                
                 
 
                 <div id="katanas-instance-container">
@@ -388,7 +399,15 @@
                 +'</video>'
                 '</div>';
             
-
+            // Car tunnel
+            const cartunnel_example_gifs = '<div class="video-sample">'
+                    + '<image src="gifs/car_tunnel.gif" style="width:100%;" class="img-responsive center-block" alt="car in tunnel"></image>'
+                    + '</div>';
+            const cartunnel_example_vids = ' <div class="video-sample">'
+                        + '<video src="videos/car_tunnel.mp4" width="50px" autoplay loop muted  controls>'
+                        + '</video>'
+                        + '</div>';
+                        
             // Katanas
             const katanas_example_gifs = '<div class="video-sample">'
                     + '<image src="gifs/katanas_animation.gif" style="width:100%;" class="img-responsive center-block" alt="katanas"></image>'
@@ -425,11 +444,13 @@
                                 
             var marbleprocess_mediaElement = isPhone ? marbleprocess_example_gifs : marbleprocess_example_vids;
             var wood2others_mediaElement = isPhone ? wood2others_example_gifs: wood2others_example_vids;               
+            var cartunnel_mediaElement = isPhone ? cartunnel_example_gifs: cartunnel_example_vids;               
             var katanas_mediaElement = isPhone ? katanas_example_gifs: katanas_example_vids;
             var shoe_mediaElement = isPhone ? shoe_example_gifs : shoe_example_vids;
 
             document.getElementById('marbleprocess-instance-container').innerHTML = marbleprocess_mediaElement;
             document.getElementById('wood2others-instance-container').innerHTML = wood2others_mediaElement;
+            document.getElementById('cartunnel-instance-container').innerHTML = cartunnel_mediaElement;
             document.getElementById('katanas-instance-container').innerHTML = katanas_mediaElement;
             document.getElementById('shoe-instance-container').innerHTML = shoe_mediaElement;
             
