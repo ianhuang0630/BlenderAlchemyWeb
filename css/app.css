@@ -170,3 +170,9 @@ video {
 .video-container-title{
     background: yellow;
 }
+
+.foot{
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
