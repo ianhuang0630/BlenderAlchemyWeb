@@ -179,17 +179,42 @@
                 <h3>
                     Editing 3D Graphics as Visual Program Refinement
                 </h3> 
-                <div class="image-sample">
-                    <image src="img/blenderalchemy_pipeline.png" style="width:100%;" class="img-responsive center-block" alt="pipeline"></image>
+
+
+                <div id="pipeline-instance-container">
+
+                    <!-- image version  -->
+                    <!-- <div class="image-sample">
+                        <image src="img/blenderalchemy_pipeline.png" style="width:100%;" class="img-responsive center-block" alt="pipeline"></image>
+                    </div> -->
+
+                    <!-- video version -->
+                    <!-- <div class="video-sample">  
+                        <video src="videos/MethodsOverview.mp4" width="50px" autoplay muted >
+                        </video>      
+                    </div>  -->
+                    
                 </div>
                 
                 <p class="text-justify">
                     To perform edits within the Blender 3D design environment, BlenderAlchemy iteratively  refines a program that defines a sequence of edits within Blender. This is done using our visual program refinement procedure, which is composed of an edit generator and a state evaluator, which iteratively generates and selects among different edit hypotheses, respectively. Both the edit generator and the state evaluator are guided by an input user intention, specified using a combination of language and reference images, either provided or hallucinated using an text-to-image generator within the Visual Imagination module. At each step, we allow for the system to revert back to the edit hypothesis from a previous iteration.
                 </p>
 
-                <div class="image-sample">
-                    <image src="img/methods_overview.png" style="width:100%;" class="img-responsive center-block" alt="overview"></image>
+                <div id="editing-instance-container">
+                    
+                    <!-- image version -->
+                    <!-- <div class="image-sample">
+                        <image src="img/methods_overview.png" style="width:100%;" class="img-responsive center-block" alt="overview"></image>
+                    </div> -->
+
+                    <!-- video version -->
+                    <!-- <div class="video-sample">  
+                        <video src="videos/ProgramEdits.mp4" width="50px" autoplay muted >
+                        </video>      
+                    </div> -->
+                    
                 </div>
+                    
                 <p class="text-justify">
                     In the context of the material editing task, consider the task of transforming a wooden procedural material into marbled granite. The following is an illustrative sample of a sequence of edit generation and state selection steps.
                 </p>
@@ -244,7 +269,6 @@
                     <!-- <div class="video-sample">  
                         <image src="gifs/car_tunnel.gif" style="width:100%;" class="img-responsive center-block" alt="car in tunnel"></image>
                     </div>
-
                     
                     <div class="video-sample">  
                         <video src="videos/car_tunnel.mp4" width="50px" autoplay loop muted  controls>
@@ -380,6 +404,24 @@
             var isPhone = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
             console.log("is Phone:", isPhone) ;
             
+            // Pipeline overview
+            const pipeline_example_img  = '<div class="image-sample">'
+                + '<image src="img/blenderalchemy_pipeline.png" style="width:100%;" class="img-responsive center-block" alt="pipeline"></image>'
+                + '</div>';
+            const pipeline_example_vids = '<div class="video-sample">'
+                + '<video src="videos/MethodsOverview.mp4" width="50px" autoplay muted >'
+                + '</video>'
+                + '</div>';
+                    
+            // Program Editing
+            const editing_example_img = '<div class="image-sample">'
+                        + '<image src="img/methods_overview.png" style="width:100%;" class="img-responsive center-block" alt="overview"></image>'
+                        + '</div>';
+            const editing_example_vids = '<div class="video-sample">'
+                    + '<video src="videos/ProgramEdits.mp4" width="50px" autoplay muted >'
+                    + '</video>'
+                    + '</div>';
+
             // Marble process
             const marbleprocess_example_gifs = '<div class="video-sample">'
                 +'<image src="gifs/marble_process.gif" style="width:100%;" class="img-responsive center-block" alt="marble process"></image>'
@@ -441,13 +483,18 @@
                             + '<video src="videos/nike_sun_0000-0100.mp4" autoplay loop muted>'
                             + '</video>'
                             + '</div>';
-                                
+    
+            var pipeline_mediaElement = isPhone ? pipeline_example_img: pipeline_example_vids;
+            var editing_mediaElement = isPhone ? editing_example_img : editing_example_vids;
             var marbleprocess_mediaElement = isPhone ? marbleprocess_example_gifs : marbleprocess_example_vids;
             var wood2others_mediaElement = isPhone ? wood2others_example_gifs: wood2others_example_vids;               
             var cartunnel_mediaElement = isPhone ? cartunnel_example_gifs: cartunnel_example_vids;               
             var katanas_mediaElement = isPhone ? katanas_example_gifs: katanas_example_vids;
             var shoe_mediaElement = isPhone ? shoe_example_gifs : shoe_example_vids;
 
+                
+            document.getElementById('pipeline-instance-container').innerHTML = pipeline_mediaElement;
+            document.getElementById('editing-instance-container').innerHTML = editing_mediaElement;
             document.getElementById('marbleprocess-instance-container').innerHTML = marbleprocess_mediaElement;
             document.getElementById('wood2others-instance-container').innerHTML = wood2others_mediaElement;
             document.getElementById('cartunnel-instance-container').innerHTML = cartunnel_mediaElement;
