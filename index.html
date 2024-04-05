@@ -150,9 +150,9 @@
                   </div>
             </div>
         </div>
-        <div class="banner-visual">
+        <div class="banner-visual" id="banner-instance-container">
             <!-- TODO : replace with animation -->
-            <img src="img/options_front.png" class="banner-img">
+            <!-- <img src="img/options_front.png" class="banner-img"> -->
         </div> 
     </div>
 
@@ -349,6 +349,11 @@
             var isPhone = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
             console.log("is Phone:", isPhone) ;
             
+            // Banner
+            const banner_img = '<img src="img/options_front.png" class="banner-img">';
+            const banner_video = '<video class="banner-video" src="videos/Banner.mp4" height="100%" autoplay loop muted >'
+                + '</video>'; 
+
             // Pipeline overview
             const pipeline_example_img  = '<div class="image-sample">'
                 + '<image src="img/blenderalchemy_pipeline.png" style="width:100%;" class="img-responsive center-block" alt="pipeline"></image>'
@@ -428,7 +433,8 @@
                             + '<video src="videos/nike_sun_0000-0100.mp4" autoplay loop muted>'
                             + '</video>'
                             + '</div>';
-    
+                                
+            var banner_mediaElement = isPhone ? banner_img : banner_video;
             var pipeline_mediaElement = isPhone ? pipeline_example_img: pipeline_example_vids;
             var editing_mediaElement = isPhone ? editing_example_img : editing_example_vids;
             var marbleprocess_mediaElement = isPhone ? marbleprocess_example_gifs : marbleprocess_example_vids;
@@ -437,7 +443,7 @@
             var katanas_mediaElement = isPhone ? katanas_example_gifs: katanas_example_vids;
             var shoe_mediaElement = isPhone ? shoe_example_gifs : shoe_example_vids;
 
-                
+            document.getElementById('banner-instance-container').innerHTML = banner_mediaElement;
             document.getElementById('pipeline-instance-container').innerHTML = pipeline_mediaElement;
             document.getElementById('editing-instance-container').innerHTML = editing_mediaElement;
             document.getElementById('marbleprocess-instance-container').innerHTML = marbleprocess_mediaElement;
