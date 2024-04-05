@@ -10,9 +10,9 @@ TODO's
 * remake teaser animation
 * move visually nice examples to top
 
-* closeup of katana swords [rendering]
+* closeup of katana swords [done]
 
-* reformat images
+* reformat images for the lotion/handcream scene
 * highlight parts of prompts that match the desired output
 
 
