@@ -7,7 +7,7 @@ TODO's
 * thinner banner (for wider screens) [done]
 * banner image --> video [done]
 * teaser figure should have lamp turned off [done]
-* remake teaser animation
+* remake teaser animation [done]
 * move visually nice examples to top
 
 * closeup of katana swords [done]
