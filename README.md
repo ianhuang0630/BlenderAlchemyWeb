@@ -12,7 +12,7 @@ TODO's
 
 * closeup of katana swords [done]
 
-* reformat images for the lotion/handcream scene
-* highlight parts of prompts that match the desired output
+* reformat images for the lotion/handcream scene [done]
+* highlight parts of prompts that match the desired output [done]
 
 
