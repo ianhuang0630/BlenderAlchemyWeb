@@ -119,14 +119,14 @@
               <!-- Second button -->
                 <div class="nav nav-justified button_content">
                     <div class="button_item">
-                        <a href="#" class="button">
+                        <a href="https://arxiv.org/abs/2404.17672" class="button">
                           <!-- <i class="fas fa-paperclip"></i>  -->
                           <i class="fa-solid fa-paperclip"></i> 
                           Paper
                         </a>
                     </div>
                     <div class="button_item">
-                        <a href="#" class="button">
+                        <a href="https://github.com/ianhuang0630/BlenderAlchemyOfficial" class="button">
                           <!-- <i class="fas fa-code"></i>  -->
                           <i class="fa-brands fa-github"></i>
                           Code
@@ -137,7 +137,7 @@
                         </div>
                     </div>
                     <div class="button_item">
-                        <a href="#" class="button">
+                        <a href="https://github.com/ianhuang0630/BlenderAlchemyPlugin" class="button">
                           <!-- <i class="fas fa-magic"></i>  -->
                           <i class="fa-solid fa-wand-magic-sparkles"></i>
                           Blender Plugin
@@ -186,7 +186,7 @@
                 </div>
                 
                 <p class="text-justify">
-                    To perform edits within the Blender 3D design environment, BlenderAlchemy iteratively  refines a program that defines a sequence of edits within Blender. This is done using our visual program refinement procedure, which is composed of an edit generator and a state evaluator, which iteratively generates and selects among different edit hypotheses, respectively. Both the edit generator and the state evaluator are guided by an input user intention, specified using a combination of language and reference images, either provided or hallucinated using an text-to-image generator within the Visual Imagination module. At each step, we allow for the system to revert back to the edit hypothesis from a previous iteration.
+                    To perform edits within the Blender 3D design environment, BlenderAlchemy iteratively  refines a program that defines a sequence of edits within Blender. This is done using our visual program refinement procedure, which is composed of an edit generator <b>G</b> and a state evaluator <b>V</b>, which iteratively generates and selects among different edit hypotheses, respectively. Both the edit generator and the state evaluator are guided by an input user intention, specified using a combination of language and reference images, either provided or hallucinated using an text-to-image generator within the Visual Imagination module. At each step, we allow for the system to revert back to the edit hypothesis from a previous iteration.
                 </p>
 
                 <div id="editing-instance-container">
@@ -336,7 +336,14 @@
                     <p> If you found the paper or code useful, please cite:
                     </p>
                     <textarea id="bibtex" class="form-control" readonly>
-
+@misc{huang2024blenderalchemy,
+    title={BlenderAlchemy: Editing 3D Graphics with Vision-Language Models}, 
+    author={Ian Huang and Guandao Yang and Leonidas Guibas},
+    year={2024},
+    eprint={2404.17672},
+    archivePrefix={arXiv},
+    primaryClass={cs.CV}
+}
                     </textarea>
                 </div>
             </div>
