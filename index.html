@@ -273,7 +273,46 @@
             </div>
         </div>
     
-        
+         <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Geometry 
+                </h3>
+                <!-- <h4>
+                    Real Captured Scenes
+                </h4> -->
+                <p class="text-justify">
+                    Certain geometry edits can be expressed in code as well, and are therefore amenable 
+                    to edits from BlenderAlchemy. For procedural geometry, we can convert geometry nodes 
+                    into a python script using a similar process as the one for materials. In the following
+                    example, BlenderAlchemy edits a subset of 60 geometry nodes to make the roses "bloom".
+                </p>
+                
+                <div id="rosebloom-instance-container">
+                    <!-- javascript-injected content -->
+                    <!-- <div class="video-sample">
+                        <video src="videos/roses_blooming.mp4"  autoplay loop muted >
+                        </video>
+                    </div> -->
+                </div>
+
+                <p class="text-justify">
+                    Blend shapes can also be expressed as a python program, which assigns coefficients to
+                    different blend shapes. In the example below, BlenderAlchemy edits the 
+                    blend coefficients to create different facial expressions to match the emotion 
+                    behind hypothetical script lines, using 19 facial blend shapes. 
+                </p>
+                 
+                <div id="faceanim-instance-container">
+                    <!-- <div class="video-sample">
+                        <video src="videos/face_anim.mp4" autoplay loop muted>
+                        </video>
+                    </div> -->
+                </div>
+                
+            </div>
+        </div>
+
         
         <!-- Lighting -->
         <div class="row">
@@ -443,7 +482,26 @@
                             + '<video src="videos/nike_sun_0000-0100.mp4" autoplay loop muted>'
                             + '</video>'
                             + '</div>';
-                                
+            
+            // roses
+            const rose_example_gifs = '<div class="video-sample">'
+                        + '<image src="gifs/roses_blooming.gif" style="width:100%;" class="img-responsive center-block" alt="roses blooming"></image>'
+                        + '</div>';
+            const rose_example_vids = '<div class="video-sample">'
+                    + '<video src="videos/roses_blooming.mp4" width="50px" autoplay loop muted>'
+                    + '</video>'
+                    + '</div>';
+
+            // face
+            const faceanim_example_gifs = '<div class="video-sample">'
+                        + '<image src="gifs/face_anim.gif" style="width:100%;" class="img-responsive center-block" alt="facial expressions with blender shape keys"></image>'
+                        + '</div>';
+            const faceanim_example_vids = '<div class="video-sample">'
+                    + '<video src="videos/face_anim.mp4" width="50px" autoplay loop muted>'
+                    + '</video>'
+                    + '</div>';
+
+
             var banner_mediaElement = isPhone ? banner_img : banner_video;
             var pipeline_mediaElement = isPhone ? pipeline_example_img: pipeline_example_vids;
             var editing_mediaElement = isPhone ? editing_example_img : editing_example_vids;
@@ -453,6 +511,9 @@
             var katanas_mediaElement = isPhone ? katanas_example_gifs: katanas_example_vids;
             var shoe_mediaElement = isPhone ? shoe_example_gifs : shoe_example_vids;
 
+            var rose_mediaElement = isPhone ? rose_example_gifs : rose_example_vids;
+            var faceanim_mediaElement = isPhone ? faceanim_example_gifs: faceanim_example_vids;
+
             document.getElementById('banner-instance-container').innerHTML = banner_mediaElement;
             document.getElementById('pipeline-instance-container').innerHTML = pipeline_mediaElement;
             document.getElementById('editing-instance-container').innerHTML = editing_mediaElement;
@@ -461,6 +522,9 @@
             document.getElementById('cartunnel-instance-container').innerHTML = cartunnel_mediaElement;
             document.getElementById('katanas-instance-container').innerHTML = katanas_mediaElement;
             document.getElementById('shoe-instance-container').innerHTML = shoe_mediaElement;
+                        
+            document.getElementById('rosebloom-instance-container').innerHTML = rose_mediaElement;
+            document.getElementById('faceanim-instance-container').innerHTML = faceanim_mediaElement;
             
         </script>
 </body>
